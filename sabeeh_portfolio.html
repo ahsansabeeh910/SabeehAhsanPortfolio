@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SABEEH AHSAN — Portfolio</title>
+<title>Sabeeh Ahsan — Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -61,6 +61,20 @@
     transition: color 0.2s;
   }
   .nav-links a:hover { color: var(--accent2); }
+  .nav-resume-btn {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    padding: 0.45rem 1.1rem;
+    border-radius: 6px;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    transition: background 0.2s, transform 0.15s;
+    white-space: nowrap;
+  }
+  .nav-resume-btn:hover { background: var(--accent2); transform: translateY(-1px); }
   .hero {
     min-height: 100vh;
     display: flex; flex-direction: column; justify-content: center;
@@ -83,6 +97,14 @@
     background: radial-gradient(circle, rgba(56,189,248,0.08) 0%, transparent 70%);
     bottom: 50px; left: 100px;
     pointer-events: none;
+  }
+  .hero-greeting {
+    font-size: 1.05rem;
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards 0.2s;
   }
   .hero-name {
     font-family: 'Syne', sans-serif;
@@ -401,13 +423,15 @@
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </div>
+  <a href="https://drive.google.com/file/d/11EzMNZddZWEDCt6llBQsN9LeuXjVC0UH/view?usp=sharing" target="_blank" class="nav-resume-btn">↓ Resume</a>
 </nav>
 
 <div class="hero">
   <div class="hero-bg-glow"></div>
   <div class="hero-bg-glow2"></div>
+  <p class="hero-greeting">Hi I am</p>
   <h1 class="hero-name">SABEEH<br><span>AHSAN</span></h1>
-  <p class="hero-desc">CS undergrad at JIIT Sector 62 Noida building AI-driven systems, scalable backends, and real-time Android platforms. 400+ problems solved. Passionate about ML and software engineering.</p>
+  <p class="hero-desc">CS undergrad at JIIT Sector 62 Noida building AI-driven systems, scalable backends, and real-time Android platforms and also passionate about ML and software engineering.</p>
   <div class="hero-cta">
     <a href="mailto:sabeehahsan11@gmail.com" class="btn-primary">✉ Get in touch</a>
     <a href="https://github.com/ahsansabeeh910" target="_blank" class="btn-outline">⟐ GitHub</a>
