@@ -27,8 +27,6 @@
     line-height: 1.6;
     overflow-x: hidden;
   }
-
-  /* NOISE OVERLAY */
   body::before {
     content: '';
     position: fixed; inset: 0;
@@ -37,8 +35,6 @@
     z-index: 0;
     opacity: 0.4;
   }
-
-  /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0;
     z-index: 100;
@@ -65,8 +61,6 @@
     transition: color 0.2s;
   }
   .nav-links a:hover { color: var(--accent2); }
-
-  /* HERO */
   .hero {
     min-height: 100vh;
     display: flex; flex-direction: column; justify-content: center;
@@ -89,16 +83,6 @@
     background: radial-gradient(circle, rgba(56,189,248,0.08) 0%, transparent 70%);
     bottom: 50px; left: 100px;
     pointer-events: none;
-  }
-  .hero-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.78rem;
-    color: var(--accent);
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    margin-bottom: 1.5rem;
-    opacity: 0;
-    animation: fadeUp 0.6s ease forwards 0.2s;
   }
   .hero-name {
     font-family: 'Syne', sans-serif;
@@ -171,8 +155,6 @@
     letter-spacing: 0.08em;
     margin-top: 2px;
   }
-
-  /* SECTION */
   section {
     padding: 6rem 3rem;
     max-width: 1100px;
@@ -203,8 +185,6 @@
     margin: 0 3rem;
     max-width: calc(100% - 6rem);
   }
-
-  /* EXPERIENCE */
   .exp-grid { display: flex; flex-direction: column; gap: 1.5rem; }
   .exp-card {
     background: var(--card);
@@ -259,8 +239,6 @@
     position: absolute; left: 0;
     color: var(--accent); font-size: 0.8rem;
   }
-
-  /* PROJECTS */
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -299,10 +277,7 @@
   }
   .proj-title { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
   .proj-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.65; flex: 1; }
-  .proj-tags {
-    display: flex; flex-wrap: wrap; gap: 0.4rem;
-    margin-top: 1.2rem;
-  }
+  .proj-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1.2rem; }
   .tag {
     font-family: 'DM Mono', monospace;
     font-size: 0.7rem;
@@ -322,8 +297,6 @@
     transition: gap 0.2s;
   }
   .proj-link:hover { gap: 0.7rem; }
-
-  /* SKILLS */
   .skills-wrapper { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; }
   .skill-category {
     background: var(--card);
@@ -352,8 +325,6 @@
     transition: background 0.15s, border-color 0.15s;
   }
   .skill-pill:hover { background: rgba(124,106,245,0.15); border-color: rgba(124,106,245,0.3); }
-
-  /* ACHIEVEMENTS */
   .ach-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
   .ach-card {
     background: var(--card);
@@ -364,11 +335,7 @@
     transition: border-color 0.2s;
   }
   .ach-card:hover { border-color: rgba(124,106,245,0.35); }
-  .ach-icon {
-    font-size: 1.4rem;
-    flex-shrink: 0;
-    margin-top: 2px;
-  }
+  .ach-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
   .ach-text { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
   .ach-title { font-weight: 500; color: var(--text); margin-bottom: 0.2rem; font-size: 0.92rem; }
   .cert-link {
@@ -381,11 +348,7 @@
     transition: gap 0.2s, color 0.2s;
   }
   .cert-link:hover { gap: 0.55rem; color: var(--accent3); }
-
-  /* CONTACT */
-  .contact-row {
-    display: flex; flex-wrap: wrap; gap: 1rem;
-  }
+  .contact-row { display: flex; flex-wrap: wrap; gap: 1rem; }
   .contact-link {
     display: flex; align-items: center; gap: 0.6rem;
     padding: 0.9rem 1.4rem;
@@ -399,8 +362,6 @@
   }
   .contact-link:hover { border-color: var(--accent); background: rgba(124,106,245,0.08); transform: translateY(-2px); }
   .contact-icon { font-size: 1rem; }
-
-  /* FOOTER */
   footer {
     text-align: center;
     padding: 3rem;
@@ -409,8 +370,6 @@
     border-top: 1px solid var(--border);
     position: relative; z-index: 1;
   }
-
-  /* ANIMATIONS */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
     to { opacity: 1; transform: translateY(0); }
@@ -421,7 +380,6 @@
     transition: opacity 0.6s ease, transform 0.6s ease;
   }
   .reveal.visible { opacity: 1; transform: translateY(0); }
-
   @media (max-width: 700px) {
     nav { padding: 1rem 1.5rem; }
     .nav-links { gap: 1.2rem; }
@@ -445,11 +403,9 @@
   </div>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
   <div class="hero-bg-glow"></div>
   <div class="hero-bg-glow2"></div>
-  <!-- <p class="hero-label">👋 Available for opportunities</p> -->
   <h1 class="hero-name">Sabeeh<br><span>Ahsan</span></h1>
   <p class="hero-desc">CS undergrad at JIIT Sector 62 Noida building AI-driven systems, scalable backends, and real-time Android platforms. 400+ problems solved. Passionate about ML and software engineering.</p>
   <div class="hero-cta">
@@ -467,7 +423,6 @@
 
 <div class="divider"></div>
 
-<!-- EXPERIENCE -->
 <section id="experience">
   <p class="section-label reveal">Experience</p>
   <h2 class="section-title reveal">Where I've worked</h2>
@@ -480,7 +435,7 @@
       <div class="exp-period">Dec 2025 – Jan 2026</div>
       <div class="exp-desc">
         <ul>
-          <li>Built predictive data models from raw datasets using preprocessing, feature extraction & evaluation techniques.</li>
+          <li>Built predictive data models from raw datasets using preprocessing, feature extraction &amp; evaluation techniques.</li>
           <li>Applied ML and analytical techniques to solve real-world business problems and improve decision-making efficiency.</li>
           <li>Improved data analysis workflows through automation and structured data processing methodologies.</li>
         </ul>
@@ -494,9 +449,9 @@
       <div class="exp-period">May 2025 – Jul 2025</div>
       <div class="exp-desc">
         <ul>
-          <li>Developed predictive ML systems for glucose forecasting, heart-risk analysis & breast cancer detection using Logistic Regression, Decision Trees, and Random Forest.</li>
-          <li>Performed preprocessing, feature engineering & model optimization on real-world medical datasets.</li>
-          <li>Built end-to-end workflows using Scikit-Learn, Pandas & NumPy for efficient experimentation and deployment.</li>
+          <li>Developed predictive ML systems for glucose forecasting, heart-risk analysis &amp; breast cancer detection using Logistic Regression, Decision Trees, and Random Forest.</li>
+          <li>Performed preprocessing, feature engineering &amp; model optimization on real-world medical datasets.</li>
+          <li>Built end-to-end workflows using Scikit-Learn, Pandas &amp; NumPy for efficient experimentation and deployment.</li>
         </ul>
       </div>
     </div>
@@ -505,16 +460,14 @@
 
 <div class="divider"></div>
 
-<!-- PROJECTS -->
 <section id="projects">
   <p class="section-label reveal">Projects</p>
   <h2 class="section-title reveal">Things I've built</h2>
   <div class="projects-grid">
-
     <div class="proj-card reveal">
       <div class="proj-icon">📍</div>
       <div class="proj-title">UniteAll: Discover · Connect · Play</div>
-      <div class="proj-desc">GPS-based Android platform for discovering nearby events with Google Auth, real-time listings, distance-based filtering algorithms, organizer dashboards, push notifications & AI-generated event descriptions.</div>
+      <div class="proj-desc">GPS-based Android platform for discovering nearby events with Google Auth, real-time listings, distance-based filtering algorithms, organizer dashboards, push notifications &amp; AI-generated event descriptions.</div>
       <div class="proj-tags">
         <span class="tag">Kotlin</span>
         <span class="tag">Firebase</span>
@@ -523,7 +476,6 @@
       </div>
       <a href="https://github.com/ahsansabeeh910" target="_blank" class="proj-link">View on GitHub →</a>
     </div>
-
     <div class="proj-card reveal">
       <div class="proj-icon">🤖</div>
       <div class="proj-title">AI Resume Analyzer</div>
@@ -537,11 +489,10 @@
       </div>
       <a href="https://github.com/ahsansabeeh910/AI-Resume-Analyzer" target="_blank" class="proj-link">View on GitHub →</a>
     </div>
-
     <div class="proj-card reveal">
       <div class="proj-icon">⌨️</div>
       <div class="proj-title">Turtle Typing System</div>
-      <div class="proj-desc">Full-stack typing platform built in a team of 5 with responsive UI, dynamic leaderboard, backend data persistence & validation via PHP and PL/SQL, and interactive typing analytics.</div>
+      <div class="proj-desc">Full-stack typing platform built in a team of 5 with responsive UI, dynamic leaderboard, backend data persistence &amp; validation via PHP and PL/SQL, and interactive typing analytics.</div>
       <div class="proj-tags">
         <span class="tag">HTML/CSS/JS</span>
         <span class="tag">PHP</span>
@@ -549,13 +500,11 @@
       </div>
       <a href="https://github.com/ahsansabeeh910/Turtle-Typing" target="_blank" class="proj-link">View on GitHub →</a>
     </div>
-
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- SKILLS -->
 <section id="skills">
   <p class="section-label reveal">Skills</p>
   <h2 class="section-title reveal">What I work with</h2>
@@ -574,7 +523,7 @@
       </div>
     </div>
     <div class="skill-category reveal">
-      <div class="skill-cat-title">ML & Data Science</div>
+      <div class="skill-cat-title">ML &amp; Data Science</div>
       <div class="skill-list">
         <span class="skill-pill">Scikit-Learn</span>
         <span class="skill-pill">Pandas</span>
@@ -585,7 +534,7 @@
       </div>
     </div>
     <div class="skill-category reveal">
-      <div class="skill-cat-title">Web & Backend</div>
+      <div class="skill-cat-title">Web &amp; Backend</div>
       <div class="skill-list">
         <span class="skill-pill">HTML5</span>
         <span class="skill-pill">CSS3</span>
@@ -597,7 +546,7 @@
       </div>
     </div>
     <div class="skill-category reveal">
-      <div class="skill-cat-title">Mobile & Cloud</div>
+      <div class="skill-cat-title">Mobile &amp; Cloud</div>
       <div class="skill-list">
         <span class="skill-pill">Android Dev</span>
         <span class="skill-pill">Firebase</span>
@@ -630,10 +579,9 @@
 
 <div class="divider"></div>
 
-<!-- ACHIEVEMENTS -->
 <section id="achievements">
-  <p class="section-label reveal">Achievements & Certifications</p>
-  <h2 class="section-title reveal">Recognition & certifications</h2>
+  <p class="section-label reveal">Achievements &amp; Certifications</p>
+  <h2 class="section-title reveal">Recognition &amp; certifications</h2>
   <div class="ach-grid">
     <div class="ach-card reveal">
       <div class="ach-icon">🏆</div>
@@ -659,7 +607,6 @@
         <a href="https://drive.google.com/file/d/1o0vAnTIaH_6-2oQJnuBq0ZukNwaMpFBr/view?usp=sharing" target="_blank" class="cert-link">View Certificate →</a>
       </div>
     </div>
-    
     <div class="ach-card reveal">
       <div class="ach-icon">🤖</div>
       <div>
@@ -668,12 +615,11 @@
         <a href="https://drive.google.com/file/d/1keHruuyjpWfRTiUEPe_TDd56mw9HZQP3/view?usp=sharing" target="_blank" class="cert-link">View Certificate →</a>
       </div>
     </div>
-    
     <div class="ach-card reveal">
       <div class="ach-icon">🎓</div>
       <div>
-        <div class="ach-title">Mastering DSA — C & C++</div>
-        <div class="ach-text">Completed comprehensive Udemy certification in Data Structures & Algorithms using C and C++.</div>
+        <div class="ach-title">Mastering DSA — C &amp; C++</div>
+        <div class="ach-text">Completed comprehensive Udemy certification in Data Structures &amp; Algorithms using C and C++.</div>
         <a href="https://drive.google.com/file/d/1hph4QD2v90rmDfP6JTTBQcM0IJgaaynH/view?usp=sharing" target="_blank" class="cert-link">View Certificate →</a>
       </div>
     </div>
@@ -689,11 +635,10 @@
 
 <div class="divider"></div>
 
-<!-- CONTACT -->
 <section id="contact">
   <p class="section-label reveal">Contact</p>
   <h2 class="section-title reveal">Let's connect</h2>
-  <!-- <p style="color:var(--muted); margin-bottom: 2rem; max-width:480px; font-size:0.95rem;" class="reveal">I'm currently open to internships, full-time roles, and interesting collaborations. Feel free to reach out!</p> -->
+  <p style="color:var(--muted); margin-bottom: 2rem; max-width:480px; font-size:0.95rem;" class="reveal">I'm currently open to internships, full-time roles, and interesting collaborations. Feel free to reach out!</p>
   <div class="contact-row reveal">
     <a href="mailto:sabeehahsan11@gmail.com" class="contact-link">
       <span class="contact-icon">✉</span> sabeehahsan11@gmail.com
@@ -708,7 +653,7 @@
       <span class="contact-icon">⟐</span> github.com/ahsansabeeh910
     </a>
     <a href="https://leetcode.com/sabeehahsan" target="_blank" class="contact-link">
-      <span class="contact-icon">{}  </span> leetcode.com/sabeehahsan
+      <span class="contact-icon">{}</span> leetcode.com/sabeehahsan
     </a>
   </div>
 </section>
