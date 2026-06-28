@@ -48,10 +48,21 @@
     background: rgba(10,10,10,0.9);
   }
   .nav-logo {
-    font-family: 'Syne', sans-serif;
-    font-weight: 800; font-size: 1.15rem;
-    color: var(--accent2);
-    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  .nav-logo img {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1.5px solid var(--accent2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .nav-logo img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.4);
   }
   .nav-links { display: flex; gap: 2rem; align-items: center; }
   .nav-links a {
@@ -619,7 +630,7 @@
 <body>
 
 <nav>
-  <div class="nav-logo">SA</div>
+  <a href="#" class="nav-logo"><img src="logo.png" alt="Sabeeh Ahsan Logo"></a>
   <div class="nav-links">
     <a href="#experience">Work</a>
     <a href="#projects">Projects</a>
